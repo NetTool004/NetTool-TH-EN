@@ -1,0 +1,207 @@
+Router Wi-Fi Setup Guide (Gaming / Stable Internet)
+
+========================
+1) DNS SETTINGS
+========================
+ไปที่เมนู: DNS
+
+ตั้งค่าแบบนี้:
+
+IPv4 DNS Server1:
+1.1.1.1
+
+IPv4 DNS Server2:
+1.0.0.1
+
+IPv6 DNS Server1:
+2606:4700:4700::1111
+
+IPv6 DNS Server2:
+2606:4700:4700::1001
+
+คำอธิบาย:
+- ใช้ Cloudflare DNS
+- ช่วยให้ตอบสนองไวขึ้น
+- ช่วยเรื่องความเสถียรในการเปิดเว็บ / เข้าเกม / ลดปัญหา DNS ช้า
+
+เสร็จแล้ว:
+- กด Apply / Save
+
+========================
+2) UPNP SETTINGS
+========================
+ไปที่เมนู: UPnP
+
+ตั้งค่าแบบนี้:
+
+UPnP:
+On
+
+IPv4 WAN Connection:
+Auto
+
+Advertisement Period:
+30 min
+
+Advertisement Time To Live:
+4 hop
+
+IPv6 WAN Connection:
+Auto
+
+คำอธิบาย:
+- เปิด UPnP เพื่อช่วยให้บางเกม / แอป / NAT ทำงานง่ายขึ้น
+- เหมาะกับเกมออนไลน์ / บางเกมที่ต้องการเปิดพอร์ตอัตโนมัติ
+
+เสร็จแล้ว:
+- กด Apply / Save
+
+========================
+3) WLAN GLOBAL CONFIGURATION
+========================
+
+------------------------
+[2.4GHz SETTINGS]
+------------------------
+ไปที่เมนู: WLAN Global Configuration > 2.4GHz
+
+ตั้งค่าแนะนำ:
+
+Channel:
+Auto
+
+Auto Channel:
+Thailand Standard (Recommend: Ch.1-11)
+
+Mode:
+Mixed (802.11b/g/n/ax)
+
+Country/Region:
+Thailand
+
+Band Width:
+20MHz
+
+SGI:
+On
+
+Beacon Interval:
+100 ms
+
+Transmitting Power:
+100%
+
+คำอธิบาย:
+- 2.4GHz เหมาะกับระยะไกล / ทะลุกำแพง
+- ใช้ 20MHz เพื่อให้สัญญาณนิ่งและลดการชนช่อง
+- Auto Channel + Thailand Standard ช่วยให้เลือกช่องเหมาะสมในไทย
+- SGI On ช่วยให้ตอบสนองไวขึ้นเล็กน้อย
+
+เสร็จแล้ว:
+- กด Apply
+
+------------------------
+[5GHz SETTINGS]
+------------------------
+ไปที่เมนู: WLAN Global Configuration > 5GHz
+
+ตั้งค่าแนะนำ:
+
+Channel:
+161
+
+Mode:
+Mixed (802.11a/n/ac/ax)
+
+Country/Region:
+Thailand
+
+Band Width:
+80MHz
+
+SGI:
+On
+
+Beacon Interval:
+100 ms
+
+Transmitting Power:
+100%
+
+คำอธิบาย:
+- 5GHz เหมาะกับเล่นเกม / ความเร็วสูง / ping นิ่งกว่า
+- Channel 161 เป็นช่องที่ดีในหลายพื้นที่
+- 80MHz ช่วยให้ได้ความเร็วสูง
+- SGI On ช่วยเรื่อง latency และ throughput
+- ใช้กับโน้ตบุ๊ก / PC ที่อยู่ใกล้เราเตอร์จะดีที่สุด
+
+เสร็จแล้ว:
+- กด Apply
+
+========================
+4) ค่าที่แนะนำสำหรับเล่นเกม
+========================
+ถ้าเล่นเกมบน PC / โน้ตบุ๊ก:
+
+- ต่อ Wi-Fi 5GHz เป็นหลัก
+- ใช้ Channel 161
+- Band Width 80MHz
+- DNS ใช้ Cloudflare
+- เปิด UPnP = On
+- 2.4GHz ใช้แค่กับมือถือ / อุปกรณ์ไกลๆ
+
+========================
+5) สรุปค่าที่ควรใช้
+========================
+
+[DNS]
+IPv4:
+1.1.1.1
+1.0.0.1
+
+IPv6:
+2606:4700:4700::1111
+2606:4700:4700::1001
+
+[UPnP]
+On
+IPv4 WAN = Auto
+Advertisement Period = 30
+TTL = 4
+IPv6 WAN = Auto
+
+[2.4GHz]
+Channel = Auto
+Mode = Mixed (802.11b/g/n/ax)
+Country = Thailand
+Bandwidth = 20MHz
+SGI = On
+Beacon = 100
+Power = 100%
+
+[5GHz]
+Channel = 161
+Mode = Mixed (802.11a/n/ac/ax)
+Country = Thailand
+Bandwidth = 80MHz
+SGI = On
+Beacon = 100
+Power = 100%
+
+========================
+6) หลังตั้งค่าเสร็จ
+========================
+1. กด Apply / Save ทุกหน้า
+2. รีสตาร์ทเราเตอร์ 1 ครั้ง
+3. ลบ Wi-Fi เดิมในเครื่อง แล้วเชื่อมใหม่
+4. ใน Windows ตั้ง DNS ซ้ำอีกครั้ง (ถ้าต้องการ)
+5. ทดสอบ Ping / เล่นเกม / Speedtest
+
+========================
+7) แนะนำเพิ่มสำหรับ AX210
+========================
+- ใช้ 5GHz เป็นหลัก
+- อยู่ใกล้เราเตอร์จะดีที่สุด
+- อัปเดตไดรเวอร์ Intel AX210 ล่าสุด
+- ใน Device Manager ปิด Power Saving ของ Wi-Fi
+- ถ้าเน้นเกมมาก ให้แยกชื่อ Wi-Fi 2.4GHz กับ 5GHz คนละชื่อ
