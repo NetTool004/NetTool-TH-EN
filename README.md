@@ -1,28 +1,23 @@
 # NetTool-TH-EN
 
-A Windows network tweak and AX210 Wi-Fi optimization toolkit.
+Windows network tweak and AX210 Wi-Fi optimization toolkit for gaming, stability, and quick recovery.
 
 ## Features
 - AX210 Wi-Fi fix and restore tools
 - AX210 GODMODE final pack
-- Gaming network tweak
+- Gaming network tweaks
 - Full AX210 auto tweak
-- AIS network files
 - Boot tools and utility scripts
 
-## Folder Structure
-- `Net/BootNet [ใช้งานได้ปกติ]` → Boot / AX210 fix tools
-- `Net/NetTool [ใช้งานได้ปกติ]` → Main network tweak tools
-- `Net/ตรวจก่อน!!!.txt` → Important instructions
+## Download
+👉 Latest Release:
+https://github.com/NetTool004/NetTool-TH-EN/releases/latest
 
-## Usage
-1. Open the `Net` folder
-2. Read `ตรวจก่อน!!!.txt` first
-3. Run the required `.bat` or `.ps1` file as Administrator
+## Recommended For
+- Windows 10
+- Windows 11
 
-## Notes
-- Recommended for Windows 10 / Windows 11
-- Use carefully and create a restore point before applying tweaks
-
-## Author
-- NetTool004
+## Important
+- Run .bat / .ps1 as Administrator when required
+- Read included instructions before applying tweaks
+- Create a restore point before major changes
